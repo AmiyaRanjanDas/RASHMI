@@ -90,5 +90,32 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   });
 });
-
 // contact section end============================
+// ==================================================================
+// button section start==========================
+var main_section = document.getElementById("main_section");
+var theme_btn1 = document.querySelector(".theme_btn1");
+var theme_btn2 = document.querySelector(".theme_btn2");
+var theme_btn3 = document.querySelector(".theme_btn3");
+var all_waves = document.querySelectorAll(".wave");
+
+function setTheme(theme, waveId) {
+  main_section.className = theme;
+  all_waves.forEach(wave => {
+    wave.id = waveId;
+  });
+}
+
+theme_btn1.addEventListener("click", () => {
+  setTheme("theme1", "wave1");
+});
+
+theme_btn2.addEventListener("click", () => {
+  setTheme("theme2", "wave2");
+});
+
+theme_btn3.addEventListener("click", () => {
+  setTheme("theme3", "wave3");
+});
+
+// button section end============================

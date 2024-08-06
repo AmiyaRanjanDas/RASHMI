@@ -5,6 +5,9 @@
   --textColor1: #000000;
   --textColor2: #ffffff;
   --lineColor: #cdc2ba;
+  --circleColor:gray;
+  --waveColor:#e2c6b5;
+  --barColor:#fff;
 }
 
 /* hero section start============================ */
@@ -213,7 +216,6 @@
   overflow-x: hidden;
 }
 .wave {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3Cpath d='M800 56.9c-155.5 0-204.9-50-405.5-49.9-200 0-250 49.9-394.5 49.9v31.8h800v-.2-31.6z' fill='%23dfc2af'/%3E%3C/svg%3E");
   position: absolute;
   width: 200%;
   height: 100%;
@@ -273,7 +275,7 @@
 /* about section start============================  */
 .service_section {
   position: relative;
-  background: linear-gradient(180deg,#e2c6b5,var(--primaryColor),var(--primaryColor));
+  background: linear-gradient(180deg,var(--waveColor),var(--primaryColor),var(--primaryColor));
   padding: 50px 100px;
   width: 100%;
 }
@@ -293,7 +295,7 @@
   left: -5%;
   width: 60px;
   height: 60px;
-  border: 2px dashed gray;
+  border: 2px dashed var(--circleColor);
   border-radius: 50%;
   animation: rotate 10s linear infinite;
 }
@@ -341,7 +343,7 @@
   background: linear-gradient(
     180deg,
     var(--primaryColor),
-    var(--textColor2),
+    var(--barColor),
     var(--primaryColor)
   );
 }
@@ -360,6 +362,11 @@
   width: 100px;
   -webkit-filter: grayscale(100%); 
   filter: grayscale(100%);
+  transition: 0.3s ease-in-out;
+}
+.skill_section div img:hover{
+  -webkit-filter: grayscale(0%); 
+  filter: grayscale(0%);
 }
 @keyframes moveLeft {
   from {
@@ -373,8 +380,11 @@
 @media only screen and (max-width: 768px) {
   .skill_section div {
     padding: 60px 25px;
-    font-size: 30px;
   }
+  .skill_section div img{
+    width: 70px;
+  }
+
 }
 /* skill section end==============================  */
 /* ==================================================================== */
@@ -421,7 +431,93 @@
 /* ===========responsive================ */
 @media only screen and (max-width: 768px) {
   .contacts {
-    padding: 25px;
+    padding: 25px 20px;
+    font-size: 25px;
   }
 }
 /* contact section end==============================  */
+/* ==================================================================== */
+/* button section start============================  */
+.btn_groups{
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  z-index: 10;
+  padding: 5px 7px;
+  border: 1px solid rgba(255, 255, 255, 0.177);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.137);
+  background: rgba(255, 255, 255, 0.53);
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+}
+.btn_groups button{
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+}
+.theme_btn1{
+  background: #ebded6;
+  border: 0.5px solid #d6bcac;
+}
+.theme_btn2{
+  background: rgb(23, 70, 255);
+  border: 0.5px solid rgb(36, 146, 255);
+}
+.theme_btn3{
+  background: rgb(255, 0, 85);
+  border: 0.5px solid rgb(201, 0, 67);
+}
+/* button section end==============================  */
+
+
+
+/* change variable color according to theme========= */
+.theme1 {
+  --primaryColor: #ebded6;
+  --secondaryColor: #e0c9ba;
+  --tertiaryColor: #d6beaf;
+  --textColor1: #000000;
+  --textColor2: #ffffff;
+  --lineColor: #cdc2ba;
+  --circleColor:gray;
+  --waveColor:#e2c6b5;
+  --barColor:#fff;
+}
+#wave1{
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3Cpath d='M800 56.9c-155.5 0-204.9-50-405.5-49.9-200 0-250 49.9-394.5 49.9v31.8h800v-.2-31.6z' fill='%23dfc2af'/%3E%3C/svg%3E");
+}
+
+.theme2 {
+  --primaryColor: rgb(7, 106, 255);
+  --secondaryColor: rgb(37, 168, 255);
+  --tertiaryColor: rgb(49, 200, 255);
+  --textColor1: #000000;
+  --textColor2: #ffffff;
+  --lineColor: rgb(155, 193, 255);
+  --circleColor:rgb(79, 79, 79);
+  --waveColor:#1a75ff;
+  --barColor:rgb(158, 207, 255);
+}
+#wave2{
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3Cpath d='M800 56.9c-155.5 0-204.9-50-405.5-49.9-200 0-250 49.9-394.5 49.9v31.8h800v-.2-31.6z' fill='%23076AFF'/%3E%3C/svg%3E");
+}
+
+.theme3 {
+  --primaryColor: rgb(255, 0, 85);
+  --secondaryColor: rgb(255, 92, 146);
+  --tertiaryColor: rgb(209, 0, 70);
+  --textColor1: #000000;
+  --textColor2: #ffffff;
+  --lineColor: rgb(255, 188, 210);
+  --circleColor:rgb(255, 188, 210);
+  --waveColor:#ff1362;
+  --barColor:rgb(255, 132, 173);
+}
+#wave3{
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3Cpath d='M800 56.9c-155.5 0-204.9-50-405.5-49.9-200 0-250 49.9-394.5 49.9v31.8h800v-.2-31.6z' fill='%23FF0055'/%3E%3C/svg%3E");
+}
+/* change variable color according to theme========= */
